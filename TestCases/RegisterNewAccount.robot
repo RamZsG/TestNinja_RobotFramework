@@ -9,18 +9,21 @@ ${Browser}=    gc
 
 *** Test Cases *** ***
 Register an account
+    # Setting random data
+    ${firstName}=     FakerLibrary.First Name
+    ${lastName}=    FakerLibrary.Last Name
+    ${email}=    FakerLibrary.Email
+    ${phone}=    FakerLibrary.Phone Number
+    ${password}=    FakerLibrary.Password
+
+    #Test begins
     Open my browser    ${URL}    ${Browser}
     CLick on my account
     Click on Register
-    ${firstName}     FakerLibrary.First Name
     I add a first name    TestRam${firstName}
-    ${lastName}=    FakerLibrary.Last Name
     I add a last name    TestRam${lastName}
-    ${email}=    FakerLibrary.Email
     I add an email    TestRam${email}
-    ${phone}=    FakerLibrary.Phone Number
     I add a telephone number    ${phone}
-    ${password}=    FakerLibrary.Password
     I add a password    ${password}
     I confirm the password    ${password}
     I subscribe to the newsletter
