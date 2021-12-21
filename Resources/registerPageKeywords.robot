@@ -24,10 +24,10 @@ I confirm the password
     [Arguments]    ${confirm}
     Input Password    ${txt_confirmPasswordid}    ${confirm}
 I subscribe to the newsletter
-    Click Element    ${radio_newsletterYes}
+    Select Radio Button   ${radio_newsletterYes}
 
 I agree to privacy policy
-    Click Element    ${chkbx_termsAgree}
+    Select Checkbox   ${chkbx_termsAgree}
 I click on continue
     Click Button    ${btn_continue}
 
