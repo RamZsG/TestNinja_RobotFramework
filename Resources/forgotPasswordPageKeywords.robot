@@ -14,3 +14,4 @@ I click on continue to reset password
 I validate email is sent out
     Wait Until Element Is Visible    ${txt_emailSent}
     Element Should Be Visible    ${txt_emailSent}
+    Page Should Contain    An email with a confirmation link has been sent your email address.

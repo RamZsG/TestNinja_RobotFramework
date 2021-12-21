@@ -34,3 +34,4 @@ I click on continue
 I validate same email error message displays
     Sleep    2s
     Element Should Be Visible   ${txt_errorMessageSameEmail}
+    Page Should Contain    Warning: E-Mail Address is already registered!

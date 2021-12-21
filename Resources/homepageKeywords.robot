@@ -27,5 +27,5 @@ I validate account was succesfully created
 
 
 Teardown
-    Sleep    2.5s
+    Sleep    5s
     Close All Browsers
