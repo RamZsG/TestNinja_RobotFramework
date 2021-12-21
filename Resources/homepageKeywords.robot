@@ -6,7 +6,7 @@ Variables    ../PageObject/Locators.py
 Open my browser
     [Arguments]    ${URL}    ${Browser}
     Open Browser    ${URL}    ${Browser}
-    Set Browser Implicit Wait    1s
+    Set Browser Implicit Wait    3s
     Maximize Browser Window
 
 CLick on my account
