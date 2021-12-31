@@ -24,7 +24,7 @@ I confirm the password
     [Arguments]    ${confirm}
     Input Password    ${txt_confirmPasswordid}    ${confirm}
 I subscribe to the newsletter
-    Select Radio Button   ${radio_newsletterYes}
+    Click Element   ${radio_newsletterYes}
 
 I agree to privacy policy
     Select Checkbox   ${chkbx_termsAgree}

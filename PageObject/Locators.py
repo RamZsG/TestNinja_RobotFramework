@@ -1,10 +1,11 @@
-#Homepage
+# Common
 #Top Menu
 drp_link_myAccount="xpath://a[@title='My Account']"
 link_register="link:Register"
 link_login="link:Login"
 
-
+##############################################################
+#Homepage
 # Store menu
 link_destktop="link:Desktops"
 

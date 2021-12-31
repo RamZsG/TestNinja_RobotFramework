@@ -1,14 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    XML
 Variables    ../PageObject/Locators.py
 
 *** Keywords ***
-Open my browser
-    [Arguments]    ${URL}    ${Browser}
-    Open Browser    ${URL}    ${Browser}
-    Set Browser Implicit Wait    3s
-    Maximize Browser Window
+Nvigate to the Registration page
+    CLick on my account
+    Click on Register
+
+Navigate to the Login page
+    CLick on my account
+    Click on Login
 
 CLick on my account
     Click Element    ${drp_link_myAccount}

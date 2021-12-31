@@ -1,36 +1,26 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    FakerLibrary
 Resource    ../Resources/homepageKeywords.robot
+Resource    ../Resources/commonKeywords.robot
 Resource    ../Resources/registerPageKeywords.robot
 Resource    ../Resources/loginPageKeywords.robot
 Resource    ../Resources/myAccountPageKeywords.robot
 Resource    ../Resources/forgotPasswordPageKeywords.robot
+Suite Setup    Setting and instancing random data
+Suite Teardown    Teardown
+Test Setup    Open my browser
+
 
 *** Variables ***
 ${URL}=    http://www.tutorialsninja.com/demo/
-${Browser}=    headlessChrome
+${Browser}=    gc
 
 *** Test Cases *** ***
 Register an account
     [Documentation]    This testcase registers and creates the variables used in the testsuite
     [Tags]    Required
-    # Setting random data
-    ${firstName}=     FakerLibrary.First Name
-    ${lastName}=    FakerLibrary.Last Name
-    ${email}=    FakerLibrary.Email
-    ${phone}=    FakerLibrary.Phone Number
-    ${password}=    FakerLibrary.Password
-
-    #Setting registration information as Test Suite variables
-    Set Suite Variable    ${firstName}    ${firstName}
-    Set Suite Variable    ${lastName}    ${lastName}
-    Set Suite Variable    ${email}    ${email}
-    Set Suite Variable    ${phone}    ${phone}
-    Set Suite Variable    ${password}    ${password}
-
     #Test begins
-    Open my browser    ${URL}    ${Browser}
+    Go To    ${URL}
     CLick on my account
     Click on Register
     I add a first name    ${firstName}
@@ -46,7 +36,7 @@ Register an account
     Teardown
 
 Register first account a second time
-    Open my browser    ${URL}    ${Browser}
+    Go To    ${URL}
     CLick on my account
     Click on Register
     I add a first name    ${firstName}
@@ -62,7 +52,7 @@ Register first account a second time
     Teardown
 
 Login using a valid account
-    Open my browser    ${URL}    ${Browser}
+    Go To    ${URL}
     CLick on my account
     Click on Login
     I enter my valid email    ${email}
@@ -72,7 +62,7 @@ Login using a valid account
     Teardown
 
 Forgot password for valid account
-    Open my browser    ${URL}    ${Browser}
+    Go To    ${URL}
     CLick on my account
     Click on Login
     I click on forgot password
