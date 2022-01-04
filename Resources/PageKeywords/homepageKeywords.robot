@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../PageObject/Locators.py
+Variables    ../../PageObject/Locators.py
 
 *** Keywords ***
 Nvigate to the Registration page

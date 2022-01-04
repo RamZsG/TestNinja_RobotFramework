@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    XML
-Variables    ../PageObject/Locators.py
+Variables    ../../PageObject/Locators.py
 
 *** Keywords ***
 I enter my forgotten email
