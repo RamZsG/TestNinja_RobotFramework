@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    XML
-Variables    ../PageObject/Locators.py
+Variables    ../../PageObject/Locators.py
 
 *** Keywords ***
 I validate I am logged in and in My account
