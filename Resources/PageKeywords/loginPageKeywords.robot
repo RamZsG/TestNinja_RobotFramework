@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    XML
 Variables    ../PageObject/Locators.py
 
 *** Keywords ***

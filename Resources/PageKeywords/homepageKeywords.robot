@@ -27,6 +27,3 @@ I validate account was succesfully created
 
 
 
-Teardown
-    Sleep    5s
-    Close All Browsers

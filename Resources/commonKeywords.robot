@@ -2,9 +2,7 @@
 Library    SeleniumLibrary
 Variables    ../PageObject/Locators.py
 Library    FakerLibrary
-
-*** Variables ***
-${Browser}=    gc
+Resource    ../PageObject/input.robot
 
 *** Keywords ***
 Open my browser
@@ -28,3 +26,7 @@ Setting and instancing random data
 Navigate to
     [Arguments]    ${URL}
     Go To    ${URL}
+
+Teardown
+    Sleep    5s
+    Close All Browsers
